@@ -1233,11 +1233,13 @@ html:not(.lt-ie10) .not-animated {
 	width: 46px;
 	height: 46px;
 	margin: 0 auto;
-	border: 3px solid #4ac4cf;
+	border: 4px solid #222d4f;
 	border-radius: 50%;
 	border-left-color: transparent;
 	border-bottom-color: transparent;
-	animation: cssload-spin .18s infinite linear;
+	animation: cssload-spin .38s;
+    	animation-iteration-count: infinite;
+  	animation-timing-function: linear;
 }
 
 @keyframes cssload-spin {
