@@ -1236,7 +1236,7 @@ html:not(.lt-ie10) .not-animated {
 	border-radius: 50%;
 	border-left-color: transparent;
 	border-bottom-color: transparent;
-	animation: cssload-spin .88s infinite linear;
+	animation: cssload-spin .38s infinite linear;
 }
 
 @keyframes cssload-spin {
