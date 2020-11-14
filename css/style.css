@@ -564,7 +564,6 @@ h3 + img {
 .row-75:empty {
 	margin-bottom: 0;
 }
-}
 
 .row-75 > * {
 	margin-bottom: 75px;
@@ -665,7 +664,7 @@ html [class*='section-'].section-bottom-0 {
 		padding: 60px 0;
 	}
 	.section-md {
-		padding: 70px 0;
+		padding: 60px 0;
 	}
 	.section-lg {
 		padding: 85px 0;
@@ -1044,7 +1043,7 @@ p.rights a:hover {
 }
 
 .animated.hinge {
-	animation-duration: 2s;
+	animation-duration: 4s;
 }
 
 html:not(.lt-ie10) .not-animated {
@@ -1206,7 +1205,7 @@ html:not(.lt-ie10) .not-animated {
 	align-items: center;
 	padding: 20px;
 	background: #ffffff;
-	transition: .1s all ease;
+	transition: .3s all ease;
 }
 
 .preloader.loaded {
@@ -1237,9 +1236,7 @@ html:not(.lt-ie10) .not-animated {
 	border-radius: 50%;
 	border-left-color: transparent;
 	border-bottom-color: transparent;
-	animation: cssload-spin .38s;
-    	animation-iteration-count: infinite;
-  	animation-timing-function: linear;
+	animation: cssload-spin .58s infinite linear;
 }
 
 @keyframes cssload-spin {
@@ -1263,7 +1260,7 @@ html:not(.lt-ie10) .not-animated {
 	overflow: hidden;
 	text-align: center;
 	text-decoration: none;
-	transition: .35s all ease-in-out;
+	transition: .45s all ease-in-out;
 	transform: translate3d(0, 100px, 0);
 	border-radius: 10em;
 }
@@ -1875,7 +1872,7 @@ html.tablet .ui-to-top {
 
 .rd-navbar-fixed .rd-navbar-brand {
 	position: relative;
-	margin-left: 6px;
+	margin-left: 4px;
 	margin-bottom: 6px;
 	overflow: hidden;
 	white-space: nowrap;
@@ -3014,7 +3011,7 @@ html.rd-navbar-fixed-linked .page {
 }
 
 .swiper-container-no-flexbox .swiper-slide {
-	float: left;
+	float: center;
 }
 
 .swiper-container-vertical > .swiper-wrapper {
