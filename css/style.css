@@ -1284,10 +1284,10 @@ html.tablet .ui-to-top {
 	display: none !important;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 574px) {
 	.ui-to-top {
-		right: 40px;
-		bottom: 40px;
+		right: 48px;
+		bottom: 48px;
 	}
 }
 
@@ -12915,7 +12915,7 @@ textarea.form-input {
 	-ms-flex-pack: center;
 	align-items: center;
 	padding: 0 30px 59px;
-	background-color: #ffffff;
+	background-color: #3E455F;
 	text-align: center;
 	text-transform: uppercase;
 }
@@ -12930,7 +12930,7 @@ textarea.form-input {
 
 .post-classic-title {
 	margin-top: 11px;
-	color: #151515;
+	color: #FFFFFF;
 	font-weight: 700;
 	letter-spacing: .025em;
 	width: 100%;
