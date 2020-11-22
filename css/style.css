@@ -17,7 +17,6 @@
  *     4.3 ToTop
  *     4.4 RD Navbar
  *     4.5 Swiper
- *     4.6 Google Map
  *     4.7 Search Results
  *     4.8 Isotope
  *     4.9 Nav custom
@@ -631,7 +630,7 @@ h3 + img {
 }
 
 .section-xl {
-	padding: 90px 0;
+	padding: 60px 0;
 }
 
 .section-xxl {
@@ -3315,35 +3314,6 @@ html.rd-navbar-fixed-linked .page {
 	}
 }
 
-/** @section Google Map */
-.google-map-markers {
-	display: none;
-}
-
-.google-map-container {
-	width: 100%;
-}
-
-.google-map {
-	height: 250px;
-	width: 100%;
-	height: 250px;
-	height: 570px;
-}
-
-@media (min-width: 992px) {
-	.google-map-container-custom-1 {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		width: 48%;
-	}
-	.google-map-container-custom-1 .google-map {
-		height: 100%;
-	}
-}
 
 /** @section Search Results */
 .rd-search-results-live {
@@ -12910,7 +12880,7 @@ textarea.form-input {
 	justify-content: space-between;
 	-ms-flex-pack: center;
 	align-items: center;
-	padding: 0 30px 59px;
+	padding: 0 30px 40px;
 	background-color: #3E455F;
 	text-align: center;
 	text-transform: uppercase;
@@ -12927,7 +12897,7 @@ textarea.form-input {
 .post-classic-title {
 	margin-top: 11px;
 	color: #FFFFFF;
-	font-weight: 700;
+	font-weight: 500;
 	letter-spacing: .025em;
 	width: 100%;
 }
