@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./styles.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:400,700%7COpen+Sans:400,600,700%7CSource+Code+Pro:300,400,500,600,700,900%7CNothing+You+Could+Do%7CPoppins:400,500">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -104,11 +105,11 @@
                 <!--Tab panes-->
                 <div class="tab-content">
                     <div class="tab-pane fade show active" id="tabs-2-1">
-                        <div class="entry-video embed-responsive embed-responsive-16by9">
+                        <div class="videoWrapper videoWrapper169 js-videoWrapper">
 
-                            <video width="886" height="668" controls poster="https://hentaimama.io/wp-content/uploads/2017/09/Swamp-Stamp-Anime-Edition-BD-1080p-FLAC-BFDF1D16.mkv_snapshot_03.46_2020.05.20_05.59.44.jpg"><source src="https://hfdl.site/new/Swamp%20Stamp%20Sub%201%20-%20Anime%20Edition%20(BD%201080p%20FLAC)%20[BFDF1D16].m4v" type="video/x-m4v">
-                            </video>
+							<iframe class="videoIframe js-videoIframe" src="" frameborder="0" allowTransparency="true" allowfullscreen data-src="https://www.yourupload.com/embed/pil833Wp770l"></iframe>
 
+							<button class="videoPoster js-videoPoster" style="background-image:url(https://hentaimama.io/wp-content/uploads/2017/09/Swamp-Stamp-Anime-Edition-BD-1080p-FLAC-BFDF1D16.mkv_snapshot_03.46_2020.05.20_05.59.44.jpg);">Play video</button>
                         </div>
                     </div>
                 </div>
@@ -145,6 +146,8 @@
         </footer>
     </div>
     <div class="snackbars" id="form-output-global"></div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script src="./scripts.js"></script>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
     <!--coded by houdini-->
