@@ -1,533 +1,669 @@
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
-
 <head>
-    <title>Collection Parte 3</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:400,700%7COpen+Sans:400,600,700%7CSource+Code+Pro:300,400,500,600,700,900%7CNothing+You+Could+Do%7CPoppins:400,500">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        .ie-panel {
-            display: none;
-            background: #212121;
-            padding: 10px 0;
-            box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, .3);
-            clear: both;
-            text-align: center;
-            position: relative;
-            z-index: 1;
-        }
+	<title>Collection Parte 3</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:400,700%7COpen+Sans:400,600,700%7CSource+Code+Pro:300,400,500,600,700,900%7CNothing+You+Could+Do%7CPoppins:400,500">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		a {
+			color: #FFFFFF;
+		}
 
-        html.ie-10 .ie-panel,
-        html.lt-ie-10 .ie-panel {
-            display: block;
-        }
-    </style>
+		@import url('https://rsms.me/inter/inter.css');
+
+		html {
+			font-family: 'Inter', sans-serif;
+		}
+
+		@supports (font-variation-settings: normal) {
+			html {
+				font-family: 'Inter var', sans-serif;
+			}
+		}
+
+		:root {
+			--bg-page: #1a1a1a;
+			--text-color: #f3f3f3;
+			--card-bg: #202020;
+			--icon-bg: #45423C;
+			--blue: #0870f8;
+			--blue-rgb: 8, 112, 248;
+			--orange: #FF9232;
+			--g-purple: linear-gradient(30deg, #85f, #9966ff);
+			--g-yellow: linear-gradient(30deg, #fc0, #fc0);
+			--g-red: linear-gradient(30deg, #f36, #f24);
+			--g-blue: linear-gradient(30deg, #0cf, #0af);
+			--g-purple: linear-gradient(30deg, #85f, #9966ff);
+			--range: 0%;
+			--shadow: rgba(0, 6, 39, .1);
+			--light-shadow: rgba(255, 255, 255, .8);
+			--light-shadow-2: rgba(255, 255, 255, .1);
+		}
+
+		* {
+			box-sizing: border-box;
+			font-family: "Inter var", sans-serif;
+			font-size: 16px;
+			font-weight: 400;
+			user-select: none;
+			transition: all 200ms ease;
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		html,
+		body,
+		.full-width {
+			height: 100%;
+		}
+
+		body {
+
+			&,
+			html {
+				margin: 0;
+				padding: 0;
+			}
+
+			display: fle;
+			padding: 0 10px;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			background:#222d4f;
+			color:var(--text-color);
+		}
+
+		.hide {
+			display: none;
+			visibility: hidden;
+			height: 0;
+		}
+
+		.pagination\:container {
+			display: flex;
+			justify-content: center;
+		}
+
+		.arrow\:text {
+			display: center;
+			vertical-align: middle;
+			font-size: 13px;
+			vertical-align: middle;
+		}
+
+		.pagination\:number {
+			--size: 32px;
+			--margin: 6px;
+			margin: 0 var(--margin);
+			border-radius: 6px;
+			background: #131D3B;
+			max-width: auto;
+			min-width: var(--size);
+			height: var(--size);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			padding: 0 6px;
+
+			@media (hover: hover) {
+				&:hover {
+					// ose darken qysh te dush 
+					background: lighten(#202020, 3%);
+				}
+			}
+
+			&:active {
+				background: lighten(#202020, 3%);
+			}
+		}
+
+		.pagination\:active {
+			--size: 32px;
+			--margin: 6px;
+			margin: 0 var(--margin);
+			border-radius: 6px;
+			background: #FFFFFF;
+			max-width: auto;
+			min-width: var(--size);
+			height: var(--size);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			padding: 0 6px;
+
+			@media (hover: hover) {
+				&:hover {
+					// ose darken qysh te dush 
+					background: lighten(#202020, 3%);
+				}
+	</style>
+	<style>
+		.ie-panel {
+			display: none;
+			background: #212121;
+			padding: 10px 0;
+			box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, .3);
+			clear: both;
+			text-align: center;
+			position: relative;
+			z-index: 1;
+		}
+
+		html.ie-10 .ie-panel,
+		html.lt-ie-10 .ie-panel {
+			display: block;
+		}
+	</style>
 </head>
 
 <body>
-    <div class="preloader">
-        <div class="preloader-body">
-            <div class="cssload-container">
-                <div class="cssload-speeding-wheel"></div>
-            </div>
-        </div>
-    </div>
-    <div class="page">
-        <header class="section page-header">
-            <!--RD Navbar-->
-            <div class="rd-navbar-wrap" style="position: absolute">
-                <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
-                    <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
-                    <div class="rd-navbar-main-outer">
-                        <div class="rd-navbar-main">
-                            <!--RD Navbar Panel-->
-                            <div class="rd-navbar-panel">
-                                <!--RD Navbar Toggle-->
-                                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
-                                <!--RD Navbar Brand-->
-                                <div class="rd-navbar-brand">
-                                    <!--Brand--><a class="brand" href="index.html"><img src="images/logohbank.png" alt="" width="148" height="26" /></a>
-                                </div>
-                            </div>
-                            <div class="rd-navbar-main-element">
-                                <div class="rd-navbar-nav-wrap">
-                                    <ul class="rd-navbar-nav">
-
-                                        <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Home</a>
-                                        </li>
-
-                                        <li class="rd-nav-item"><a class="rd-nav-link" href="uncensored.html">Uncensored</a>
-                                        </li>
-
-                                        <li class="rd-nav-item active"><a class="rd-nav-link" href="collection.html">Collection</a>
-                                        </li>
-
-                                        <li class="rd-nav-item"><a class="rd-nav-link" href="anima.html">Anima</a>
-                                        </li>
-
-                                        <li class="rd-nav-item"><a class="rd-nav-link" href="3d_cgi.html">3D CGI</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="rd-navbar-collapse">
-                                <ul class="rd-navbar-nav">
-                                    <li class="rd-nav-item"><a class="rd-nav-link" href="https://www.underhentai.net/?hl=es"><img src="images/html-5.png" /> Under Hentai</a></li>
-
-                                    <li class="rd-nav-item"><a class="rd-nav-link" href="twitter.html"><img src="images/html-5.png" /> Twitter</a></li>
-
-                                    <li class="rd-nav-item"><a class="rd-nav-link" href="https://hentai-id.tv/"><img src="images/html-5.png" /> Hentai-ID</a></li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </header>
-
-
-        <!-- Breadcrumbs-->
-        <br>
-
-        <div class="col-md-6">
-            <div class="box-about">
-                <div class="box-about-title-wrap">
-                    <h2 class="box-about-mega-title">hbank</h2>
-                </div>
-                <h4 class="box-about-post-title">Joshi Luck!</h4>
-            </div>
-        </div>
-        <br>
-        <div class="container">
-            <div class="row row-75 flex-lg-row-reverse">
-                <div class="col-lg-6 text-center">
-                    <div class="box-image-1"><a href="joshi_luck.html"><img src="https://imgs1.e-droid.net/srv/imgs/cards/o1107598_3308664.png?v=1" width="220" height="180" />
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
-    
-
-        <div class="col-md-6">
-            <div class="box-about">
-                <h4 class="box-about-post-title">Junk Land</h4>
-            </div>
-        </div>
-
-        <br>
-        <div class="container">
-            <div class="row row-75 flex-lg-row-reverse">
-                <div class="col-lg-6 text-center">
-                    <div class="box-image-1"><a href="junk_land.html"><img src="https://imgs1.e-droid.net/srv/imgs/cards/o1107598_5255547.png?v=1" width="220" height="180" /></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
-
-
-        <div class="col-md-6">
-            <div class="box-about">
-                <h4 class="box-about-post-title">Kanojo ga Mimai!!</h4>
-            </div>
-        </div>
-
-        <br>
-        <div class="container">
-            <div class="row row-75 flex-lg-row-reverse">
-                <div class="col-lg-6 text-center">
-                    <div class="box-image-1"><a href="kanojo_ga_mimai_ni_konai_wake.html"><img src="https://ohentai.org/video_data/Kanojo%20ga%20Mimai%20ni%20Konai%20Wake/cover.png" width="220" height="180" /></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
-
-
-
-        <div class="col-md-6">
-            <div class="box-about">
-                <h4 class="box-about-post-title">Kanojo wa Dare!!</h4>
-            </div>
-        </div>
-
-        <br>
-        <div class="container">
-            <div class="row row-75 flex-lg-row-reverse">
-                <div class="col-lg-6 text-center">
-                    <div class="box-image-1"><a href="kanojo_wa_dare_to_demo_sex_suru.html"><img src="https://hentaicore.org/uploads/posts/2017-05/1495715700_kanojo-wa-dare-to-demo-sex-suru.jpg" width="220" height="180" /></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
-
-
-
-        <div class="col-md-6">
-            <div class="box-about">
-                <h4 class="box-about-post-title">Kanpeki Ojou-sama!!</h4>
-            </div>
-        </div>
-
-        <br>
-        <div class="container">
-            <div class="row row-75 flex-lg-row-reverse">
-                <div class="col-lg-6 text-center">
-                    <div class="box-image-1"><a href="kanpeki_ojou_sama_no_watakushi.html"><img src="https://i.pinimg.com/474x/a8/4d/ea/a84dea109347513a3535e8ca1dbd8e42.jpg" width="220" height="180" /></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
-
-
-
-        <div class="col-md-6">
-            <div class="box-about">
-                <h4 class="box-about-post-title">Idol Sister</h4>
-            </div>
-        </div>
-
-        <br>
-        <div class="container">
-            <div class="row row-75 flex-lg-row-reverse">
-                <div class="col-lg-6 text-center">
-                    <div class="box-image-1"><a href="idol_sister.html"><img src="https://i.redd.it/dh4fg5bdcgn21.jpg" width="220" height="180" /></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
-
-
-
-        <div class="col-md-6">
-            <div class="box-about">
-                <h4 class="box-about-post-title">Kedamono-tachi!!</h4>
-            </div>
-        </div>
-
-        <br>
-        <div class="container">
-            <div class="row row-75 flex-lg-row-reverse">
-                <div class="col-lg-6 text-center">
-                    <div class="box-image-1"><a href="kedamono_tachi_no_sumu_Ie_de.html"><img src="https://4.bp.blogspot.com/-XpkxAg2Xxe0/WotxbJMfMiI/AAAAAAAAAkI/y-o21mE9kwYrX2IWsgaDon_XWZEQkcI9wCLcBGAs/s1600/Kedamono-tachi-no-Sumu-Ie-de.jpg" width="220" height="180" /></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
-
-        <div class="col-md-6">
-            <div class="box-about">
-                <h4 class="box-about-post-title">Koakuma Kanojo!!</h4>
-            </div>
-        </div>
-
-        <br>
-        <div class="container">
-            <div class="row row-75 flex-lg-row-reverse">
-                <div class="col-lg-6 text-center">
-                    <div class="box-image-1"><a href="koakuma_no_kanojo.html"><img src="https://imgs1.e-droid.net/srv/imgs/cards/o1107598_3308668.png?v=1" width="220" height="180" /></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
-
-        <div class="col-md-6">
-            <div class="box-about">
-                <h4 class="box-about-post-title">Koiito Kinenbi!!</h4>
-            </div>
-        </div>
-
-        <br>
-        <div class="container">
-            <div class="row row-75 flex-lg-row-reverse">
-                <div class="col-lg-6 text-center">
-                    <div class="box-image-1"><a href="koiito_kinenbi_the_animation.html"><img src="https://imgs1.e-droid.net/srv/imgs/cards/o1107598_3308670.png?v=1" width="220" height="180" /></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
-
-
-
-        <div class="col-md-6">
-            <div class="box-about">
-                <h4 class="box-about-post-title">Kuroinu: Kedakaki!!</h4>
-            </div>
-        </div>
-
-        <br>
-        <div class="container">
-            <div class="row row-75 flex-lg-row-reverse">
-                <div class="col-lg-6 text-center">
-                    <div class="box-image-1"><a href="kuroinu.html"><img src="https://village.photos/images/user/07ae93c8-9d77-4211-b3b3-f5d5baff018f/32b58750-2c9a-4a3d-8690-ec88bdfad9a2.jpg" width="220" height="180" /></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
-
-
-
-        <div class="col-md-6">
-            <div class="box-about">
-                <h4 class="box-about-post-title">Ore ga Kanojo!!</h4>
-            </div>
-        </div>
-
-        <br>
-        <div class="container">
-            <div class="row row-75 flex-lg-row-reverse">
-                <div class="col-lg-6 text-center">
-                    <div class="box-image-1"><a href="ore_ga_kanojo_o_su_wake.html"><img src="https://imgs1.e-droid.net/srv/imgs/cards/o1107598_3308669.png?v=1" width="220" height="180" /></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
-
-
-
-        <div class="col-md-6">
-            <div class="box-about">
-                <h4 class="box-about-post-title">Oyasumi sex</h4>
-            </div>
-        </div>
-
-        <br>
-        <div class="container">
-            <div class="row row-75 flex-lg-row-reverse">
-                <div class="col-lg-6 text-center">
-                    <div class="box-image-1"><a href="oyasumi_sex.html"><img src="https://2.bp.blogspot.com/-dkVfpk2IXOE/WzW0SBD9y4I/AAAAAAAABHA/XEsvJyGmJM4xpir0CNlLGiskMBaF-CZEQCLcBGAs/s1600/468%2B-%2Bx2NRetF.jpgs" width="220" height="180" /></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
-
-
-
-        <div class="col-md-6">
-            <div class="box-about">
-                <h4 class="box-about-post-title">Please Rape Me!</h4>
-            </div>
-        </div>
-
-        <br>
-        <div class="container">
-            <div class="row row-75 flex-lg-row-reverse">
-                <div class="col-lg-6 text-center">
-                    <div class="box-image-1"><a href="please_rape_me.html"><img src="https://imgs1.e-droid.net/srv/imgs/cards/o1107598_3308667.png?v=1" width="220" height="180" /></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
-
-
-
-        <div class="col-md-6">
-            <div class="box-about">
-                <h4 class="box-about-post-title">Rape Gouhouka!!!</h4>
-            </div>
-        </div>
-
-        <br>
-        <div class="container">
-            <div class="row row-75 flex-lg-row-reverse">
-                <div class="col-lg-6 text-center">
-                    <div class="box-image-1"><a href="rape_gouhouka.html"><img src="https://images-na.ssl-images-amazon.com/images/I/71MHBWRhlTL._AC_SL1500_.jpg" width="220" height="180" /></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
-
-
-
-        <div class="col-md-6">
-            <div class="box-about">
-                <h4 class="box-about-post-title">Rance: Hikari!!</h4>
-            </div>
-        </div>
-
-        <br>
-        <div class="container">
-            <div class="row row-75 flex-lg-row-reverse">
-                <div class="col-lg-6 text-center">
-                    <div class="box-image-1"><a href="rance_the_animation.html"><img src="https://imgs1.e-droid.net/srv/imgs/cards/o1107598_3308671.png?v=1" width="220" height="180" /></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
-
-
-
-        <div class="col-md-6">
-            <div class="box-about">
-                <h4 class="box-about-post-title">Real Eroge Situation</h4>
-            </div>
-        </div>
-
-        <br>
-        <div class="container">
-            <div class="row row-75 flex-lg-row-reverse">
-                <div class="col-lg-6 text-center">
-                    <div class="box-image-1"><a href="real_erogame_situation.html"><img src="https://imgs1.e-droid.net/srv/imgs/cards/o1107598_5258365.png?v=1" width="220" height="180" /></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
-
-
-
-        <div class="col-md-6">
-            <div class="box-about">
-                <h4 class="box-about-post-title">Rennyuu Tales</h4>
-            </div>
-        </div>
-
-        <br>
-        <div class="container">
-            <div class="row row-75 flex-lg-row-reverse">
-                <div class="col-lg-6 text-center">
-                    <div class="box-image-1"><a href="rennyuu_tales_the_animation.html"><img src="https://2.bp.blogspot.com/-c8pd7QPLyaU/W48EfBg0GSI/AAAAAAAACoE/dZ9MsU5Gq-Y862yEN_Z2xh61ZcWiNHvHACK4BGAYYCw/s1600/A9yxi1r.jpg" width="220" height="180" /></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
-
-
-
-        <div class="col-md-6">
-            <div class="box-about">
-                <h4 class="box-about-post-title">Residence!!</h4>
-            </div>
-        </div>
-
-        <br>
-        <div class="container">
-            <div class="row row-75 flex-lg-row-reverse">
-                <div class="col-lg-6 text-center">
-                    <div class="box-image-1"><a href="residence.html"><img src="https://imgs1.e-droid.net/srv/imgs/cards/o1107598_5255553.png?v=1" width="220" height="180" /></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
-
-
-
-        <div class="col-md-6">
-            <div class="box-about">
-                <h4 class="box-about-post-title">Rune's Pharmacy</h4>
-            </div>
-        </div>
-
-        <br>
-        <div class="container">
-            <div class="row row-75 flex-lg-row-reverse">
-                <div class="col-lg-6 text-center">
-                    <div class="box-image-1"><a href="runes_pharmacy.html"><img src="https://images-na.ssl-images-amazon.com/images/I/816-G9SEgAL._AC_SL1500_.jpg" width="220" height="180" /></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
-
-
-        <div class="col-md-6">
-            <div class="box-about">
-                <h4 class="box-about-post-title">Saimin Seishidou</h4>
-            </div>
-        </div>
-
-        <br>
-        <div class="container">
-            <div class="row row-75 flex-lg-row-reverse">
-                <div class="col-lg-6 text-center">
-                    <div class="box-image-1"><a href="saimin_seishidou.html"><img src="https://imgs1.e-droid.net/srv/imgs/cards/o1107598_3620702.png?v=1" width="220" height="180" /></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
-
-
-
-
-<!-- PAGINACION-->
-       
-        <div align="center">
-            <ul  class="rd-navbar-nav">
-                <a href="collection.html"><img src="images/page1off.png" width="32" HSPACE="3"/></a>
-
-                <a href="collection_parte_2.html"><img src="images/page2off.png" width="32" HSPACE="3"/></a>
-
-                <a><img src="images/page3on.png" width="40" HSPACE="3" /></a>
-                
-                <a href="collection_parte_4.html"><img src="images/page4off.png" width="32" HSPACE="3" /></a>
-                
-                <a href="collection_parte_5.html"><img src="images/page5off.png" width="32" HSPACE="3"/></a>
-                
-                <a><img src="images/page6off.png" width="32" HSPACE="3"/></a>
-            </ul>
-        </div>
-
-
-<!-- FOOTER -->
-
-        <footer class="section footer-classic bg-default">
-            <div class="container">
-                <div class="row row-15">
-                    <div class="col-sm-6">
-                        <p class="rights"><span>HBank Poryect</span><span>&nbsp;</span><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>\&nbsp;</span>All Rights Reserved</p>
-                    </div>
-                    <div class="col-sm-6">
-                    </div>
-                </div>
-            </div>
-
-        </footer>
-    </div>
-    <div class="snackbars" id="form-output-global"></div>
-    <script src="js/core.min.js"></script>
-    <script src="js/script.js"></script>
+	<div class="preloader">
+		<div class="preloader-body">
+			<div class="cssload-container">
+				<div class="cssload-speeding-wheel"></div>
+			</div>
+		</div>
+	</div>
+	<div class="page">
+		<header class="section page-header">
+			<!--RD Navbar-->
+			<div class="rd-navbar-wrap" style="position: absolute">
+				<nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+					<div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
+					<div class="rd-navbar-main-outer">
+						<div class="rd-navbar-main">
+							<!--RD Navbar Panel-->
+							<div class="rd-navbar-panel">
+								<!--RD Navbar Toggle-->
+								<button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+								<!--RD Navbar Brand-->
+								<div class="rd-navbar-brand">
+									<!--Brand--><a class="brand" href="index.html"><img src="images/logohbank.png" alt="" width="148" height="26" /></a>
+								</div>
+							</div>
+							<div class="rd-navbar-main-element">
+								<div class="rd-navbar-nav-wrap">
+									<ul class="rd-navbar-nav">
+										<li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Home</a>
+										</li>
+										<li class="rd-nav-item"><a class="rd-nav-link" href="uncensored.html">Uncensored</a>
+										</li>
+										<li class="rd-nav-item active"><a class="rd-nav-link" href="collection.html">Collection</a>
+										</li>
+										<li class="rd-nav-item"><a class="rd-nav-link" href="anima.html">Anima</a>
+										</li>
+										<li class="rd-nav-item"><a class="rd-nav-link" href="3d_cgi.html">3D CGI</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="rd-navbar-collapse">
+								<ul class="rd-navbar-nav">
+									<li class="rd-nav-item"><a class="rd-nav-link" href="https://www.underhentai.net/?hl=es"><img src="images/html-5.png" /> Under Hentai</a></li>
+									<li class="rd-nav-item"><a class="rd-nav-link" href="twitter.html"><img src="images/html-5.png" /> Twitter</a></li>
+									<li class="rd-nav-item"><a class="rd-nav-link" href="https://hentai-id.tv/"><img src="images/html-5.png" /> Hentai-ID</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<!-- Breadcrumbs-->
+		<br>
+		<div class="col-md-6">
+			<div class="box-about">
+				<div class="box-about-title-wrap">
+					<h2 class="box-about-mega-title">hbank</h2>
+				</div>
+				<br>
+				<div class="pagination:container">
+			<a href="collection_parte_2.html">
+				<div class="pagination:number arrow">
+					<svg width="18" height="18">
+						<use xlink:href="#left" />
+					</svg>
+				</div>
+			</a>
+
+			<a href="collection.html">
+				<div class="pagination:number">
+					1
+				</div>
+			</a>
+
+			<a href="collection_parte_2.html">
+				<div class="pagination:number">
+					2
+				</div>
+			</a>
+
+			<div class="pagination:number pagination:active" style="color: #222d4f;">
+				3
+			</div>
+
+			<a href="collection_parte_4.html">
+				<div class="pagination:number">
+					4
+				</div>
+			</a>
+
+			<a href="collection_parte_5.html">
+				<div class="pagination:number">
+					5
+				</div>
+			</a>
+			
+			<a href="collection_parte_4.html">
+			<div class="pagination:number arrow">
+				<svg width="18" height="18">
+					<use xlink:href="#right" />
+				</svg>
+			</div>
+			</a>
+		</div>
+				<br>
+				<h4 class="box-about-post-title">Joshi Luck!</h4>
+			</div>
+		</div>
+		<br>
+		<div class="container">
+			<div class="row row-75 flex-lg-row-reverse">
+				<div class="col-lg-6 text-center">
+					<div class="box-image-1"><a href="joshi_luck.html"><img src="https://imgs1.e-droid.net/srv/imgs/cards/o1107598_3308664.png?v=1" width="220" height="180" />
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="col-md-6">
+			<div class="box-about">
+				<h4 class="box-about-post-title">Junk Land</h4>
+			</div>
+		</div>
+		<br>
+		<div class="container">
+			<div class="row row-75 flex-lg-row-reverse">
+				<div class="col-lg-6 text-center">
+					<div class="box-image-1"><a href="junk_land.html"><img src="https://imgs1.e-droid.net/srv/imgs/cards/o1107598_5255547.png?v=1" width="220" height="180" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="col-md-6">
+			<div class="box-about">
+				<h4 class="box-about-post-title">Kanojo ga Mimai!!</h4>
+			</div>
+		</div>
+		<br>
+		<div class="container">
+			<div class="row row-75 flex-lg-row-reverse">
+				<div class="col-lg-6 text-center">
+					<div class="box-image-1"><a href="kanojo_ga_mimai_ni_konai_wake.html"><img src="https://ohentai.org/video_data/Kanojo%20ga%20Mimai%20ni%20Konai%20Wake/cover.png" width="220" height="180" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="col-md-6">
+			<div class="box-about">
+				<h4 class="box-about-post-title">Kanojo wa Dare!!</h4>
+			</div>
+		</div>
+		<br>
+		<div class="container">
+			<div class="row row-75 flex-lg-row-reverse">
+				<div class="col-lg-6 text-center">
+					<div class="box-image-1"><a href="kanojo_wa_dare_to_demo_sex_suru.html"><img src="https://hentaicore.org/uploads/posts/2017-05/1495715700_kanojo-wa-dare-to-demo-sex-suru.jpg" width="220" height="180" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="col-md-6">
+			<div class="box-about">
+				<h4 class="box-about-post-title">Kanpeki Ojou-sama!!</h4>
+			</div>
+		</div>
+		<br>
+		<div class="container">
+			<div class="row row-75 flex-lg-row-reverse">
+				<div class="col-lg-6 text-center">
+					<div class="box-image-1"><a href="kanpeki_ojou_sama_no_watakushi.html"><img src="https://i.pinimg.com/474x/a8/4d/ea/a84dea109347513a3535e8ca1dbd8e42.jpg" width="220" height="180" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="col-md-6">
+			<div class="box-about">
+				<h4 class="box-about-post-title">Idol Sister</h4>
+			</div>
+		</div>
+		<br>
+		<div class="container">
+			<div class="row row-75 flex-lg-row-reverse">
+				<div class="col-lg-6 text-center">
+					<div class="box-image-1"><a href="idol_sister.html"><img src="https://i.redd.it/dh4fg5bdcgn21.jpg" width="220" height="180" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="col-md-6">
+			<div class="box-about">
+				<h4 class="box-about-post-title">Kedamono-tachi!!</h4>
+			</div>
+		</div>
+		<br>
+		<div class="container">
+			<div class="row row-75 flex-lg-row-reverse">
+				<div class="col-lg-6 text-center">
+					<div class="box-image-1"><a href="kedamono_tachi_no_sumu_Ie_de.html"><img src="https://4.bp.blogspot.com/-XpkxAg2Xxe0/WotxbJMfMiI/AAAAAAAAAkI/y-o21mE9kwYrX2IWsgaDon_XWZEQkcI9wCLcBGAs/s1600/Kedamono-tachi-no-Sumu-Ie-de.jpg" width="220" height="180" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="col-md-6">
+			<div class="box-about">
+				<h4 class="box-about-post-title">Koakuma Kanojo!!</h4>
+			</div>
+		</div>
+		<br>
+		<div class="container">
+			<div class="row row-75 flex-lg-row-reverse">
+				<div class="col-lg-6 text-center">
+					<div class="box-image-1"><a href="koakuma_no_kanojo.html"><img src="https://imgs1.e-droid.net/srv/imgs/cards/o1107598_3308668.png?v=1" width="220" height="180" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="col-md-6">
+			<div class="box-about">
+				<h4 class="box-about-post-title">Koiito Kinenbi!!</h4>
+			</div>
+		</div>
+		<br>
+		<div class="container">
+			<div class="row row-75 flex-lg-row-reverse">
+				<div class="col-lg-6 text-center">
+					<div class="box-image-1"><a href="koiito_kinenbi_the_animation.html"><img src="https://imgs1.e-droid.net/srv/imgs/cards/o1107598_3308670.png?v=1" width="220" height="180" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="col-md-6">
+			<div class="box-about">
+				<h4 class="box-about-post-title">Kuroinu: Kedakaki!!</h4>
+			</div>
+		</div>
+		<br>
+		<div class="container">
+			<div class="row row-75 flex-lg-row-reverse">
+				<div class="col-lg-6 text-center">
+					<div class="box-image-1"><a href="kuroinu.html"><img src="https://village.photos/images/user/07ae93c8-9d77-4211-b3b3-f5d5baff018f/32b58750-2c9a-4a3d-8690-ec88bdfad9a2.jpg" width="220" height="180" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="col-md-6">
+			<div class="box-about">
+				<h4 class="box-about-post-title">Ore ga Kanojo!!</h4>
+			</div>
+		</div>
+		<br>
+		<div class="container">
+			<div class="row row-75 flex-lg-row-reverse">
+				<div class="col-lg-6 text-center">
+					<div class="box-image-1"><a href="ore_ga_kanojo_o_su_wake.html"><img src="https://imgs1.e-droid.net/srv/imgs/cards/o1107598_3308669.png?v=1" width="220" height="180" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="col-md-6">
+			<div class="box-about">
+				<h4 class="box-about-post-title">Oyasumi sex</h4>
+			</div>
+		</div>
+		<br>
+		<div class="container">
+			<div class="row row-75 flex-lg-row-reverse">
+				<div class="col-lg-6 text-center">
+					<div class="box-image-1"><a href="oyasumi_sex.html"><img src="https://2.bp.blogspot.com/-dkVfpk2IXOE/WzW0SBD9y4I/AAAAAAAABHA/XEsvJyGmJM4xpir0CNlLGiskMBaF-CZEQCLcBGAs/s1600/468%2B-%2Bx2NRetF.jpgs" width="220" height="180" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="col-md-6">
+			<div class="box-about">
+				<h4 class="box-about-post-title">Please Rape Me!</h4>
+			</div>
+		</div>
+		<br>
+		<div class="container">
+			<div class="row row-75 flex-lg-row-reverse">
+				<div class="col-lg-6 text-center">
+					<div class="box-image-1"><a href="please_rape_me.html"><img src="https://imgs1.e-droid.net/srv/imgs/cards/o1107598_3308667.png?v=1" width="220" height="180" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="col-md-6">
+			<div class="box-about">
+				<h4 class="box-about-post-title">Rape Gouhouka!!!</h4>
+			</div>
+		</div>
+		<br>
+		<div class="container">
+			<div class="row row-75 flex-lg-row-reverse">
+				<div class="col-lg-6 text-center">
+					<div class="box-image-1"><a href="rape_gouhouka.html"><img src="https://images-na.ssl-images-amazon.com/images/I/71MHBWRhlTL._AC_SL1500_.jpg" width="220" height="180" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="col-md-6">
+			<div class="box-about">
+				<h4 class="box-about-post-title">Rance: Hikari!!</h4>
+			</div>
+		</div>
+		<br>
+		<div class="container">
+			<div class="row row-75 flex-lg-row-reverse">
+				<div class="col-lg-6 text-center">
+					<div class="box-image-1"><a href="rance_the_animation.html"><img src="https://imgs1.e-droid.net/srv/imgs/cards/o1107598_3308671.png?v=1" width="220" height="180" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="col-md-6">
+			<div class="box-about">
+				<h4 class="box-about-post-title">Real Eroge Situation</h4>
+			</div>
+		</div>
+		<br>
+		<div class="container">
+			<div class="row row-75 flex-lg-row-reverse">
+				<div class="col-lg-6 text-center">
+					<div class="box-image-1"><a href="real_erogame_situation.html"><img src="https://imgs1.e-droid.net/srv/imgs/cards/o1107598_5258365.png?v=1" width="220" height="180" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="col-md-6">
+			<div class="box-about">
+				<h4 class="box-about-post-title">Rennyuu Tales</h4>
+			</div>
+		</div>
+		<br>
+		<div class="container">
+			<div class="row row-75 flex-lg-row-reverse">
+				<div class="col-lg-6 text-center">
+					<div class="box-image-1"><a href="rennyuu_tales_the_animation.html"><img src="https://2.bp.blogspot.com/-c8pd7QPLyaU/W48EfBg0GSI/AAAAAAAACoE/dZ9MsU5Gq-Y862yEN_Z2xh61ZcWiNHvHACK4BGAYYCw/s1600/A9yxi1r.jpg" width="220" height="180" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="col-md-6">
+			<div class="box-about">
+				<h4 class="box-about-post-title">Residence!!</h4>
+			</div>
+		</div>
+		<br>
+		<div class="container">
+			<div class="row row-75 flex-lg-row-reverse">
+				<div class="col-lg-6 text-center">
+					<div class="box-image-1"><a href="residence.html"><img src="https://imgs1.e-droid.net/srv/imgs/cards/o1107598_5255553.png?v=1" width="220" height="180" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="col-md-6">
+			<div class="box-about">
+				<h4 class="box-about-post-title">Rune's Pharmacy</h4>
+			</div>
+		</div>
+		<br>
+		<div class="container">
+			<div class="row row-75 flex-lg-row-reverse">
+				<div class="col-lg-6 text-center">
+					<div class="box-image-1"><a href="runes_pharmacy.html"><img src="https://images-na.ssl-images-amazon.com/images/I/816-G9SEgAL._AC_SL1500_.jpg" width="220" height="180" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="col-md-6">
+			<div class="box-about">
+				<h4 class="box-about-post-title">Saimin Seishidou</h4>
+			</div>
+		</div>
+		<br>
+		<div class="container">
+			<div class="row row-75 flex-lg-row-reverse">
+				<div class="col-lg-6 text-center">
+					<div class="box-image-1"><a href="saimin_seishidou.html"><img src="https://imgs1.e-droid.net/srv/imgs/cards/o1107598_3620702.png?v=1" width="220" height="180" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+
+		<!-- PAGINACION-->
+		<div class="pagination:container">
+			<a href="collection_parte_2.html">
+				<div class="pagination:number arrow">
+					<svg width="18" height="18">
+						<use xlink:href="#left" />
+					</svg>
+				</div>
+			</a>
+
+			<a href="collection.html">
+				<div class="pagination:number">
+					1
+				</div>
+			</a>
+
+			<a href="collection_parte_2.html">
+				<div class="pagination:number">
+					2
+				</div>
+			</a>
+
+			<div class="pagination:number pagination:active" style="color: #222d4f;">
+				3
+			</div>
+
+			<a href="collection_parte_4.html">
+				<div class="pagination:number">
+					4
+				</div>
+			</a>
+
+			<a href="collection_parte_5.html">
+				<div class="pagination:number">
+					5
+				</div>
+			</a>
+			
+			<a href="collection_parte_4.html">
+			<div class="pagination:number arrow">
+				<svg width="18" height="18">
+					<use xlink:href="#right" />
+				</svg>
+			</div>
+			</a>
+		</div>
+		<svg class="hide">
+			<symbol id="left" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+			</symbol>
+			<symbol id="right" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+			</symbol>
+		</svg>
+
+		<!-- FOOTER -->
+		<footer class="section footer-classic bg-default">
+			<div class="container">
+				<div class="row row-15">
+					<div class="col-sm-6">
+						<p align="center" class="rights"><span>HBank Poryect</span><span>&nbsp;</span><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>\&nbsp;</span>All Rights Reserved</p>
+					</div>
+					<div class="col-sm-6">
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+	<div class="snackbars" id="form-output-global"></div>
+	<script src="js/core.min.js"></script>
+	<script src="js/script.js"></script>
 </body></html>
