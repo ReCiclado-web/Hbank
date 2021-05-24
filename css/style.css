@@ -2823,7 +2823,7 @@ html.rd-navbar-fixed-linked .page {
 
 .rd-navbar-classic.rd-navbar-static .rd-navbar-aside,
 .rd-navbar-classic.rd-navbar-static .rd-navbar-main {
-	max-width: 1170px;
+	max-width: 1420px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -13999,7 +13999,7 @@ footer a:hover {
 
 @media (min-width: 768px) {
 	.footer-contact {
-		text-align: right;
+		text-align: center;
 	}
 }
 
